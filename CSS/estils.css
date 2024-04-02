@@ -1,0 +1,300 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+  	font-family: "Quicksand", sans-serif;
+  	font-style: normal;
+  	overflow-x: hidden;
+}
+
+/*0. CAPÇALERA*/
+
+header {
+	width: 100vw;
+	height: auto;
+	background-color: purple;
+	display:flex;
+	justify-content:space-between;
+	padding: 2% 10% 2% 10%;
+}
+
+#logotip {
+	width: 50%;
+	height: auto;
+}
+
+#logotip img{
+	width: 20%;
+}
+
+nav {
+	width: 50%;
+	display:flex;
+	justify-content:space-evenly;
+	flex-direction:row;
+}
+
+#menu {
+	width: auto;
+	height: 100%;
+	list-style:none;
+	display:flex;
+	padding:4vh;
+}
+
+.linksmenu {
+	width: auto;
+	margin: 0px 10px;
+	font-weight: bold;
+}
+
+.linksmenu a {
+	text-decoration:none;
+	color: white;
+	font-size: 1.2rem;
+	border-radius: 16px;
+	padding:4vh;
+} 
+
+.linksmenu a:hover{
+/*	color: #42D185;*/
+	text-decoration-line: underline;
+	text-decoration-thickness: 6px 
+}
+
+/*1. HERO*/
+hero {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background-color: cyan;
+	display:flex;
+	color:white;
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+/*2. SOBRE AQUEST FESTIVAL*/
+
+#about {
+	width: 100vw;
+	height: auto;
+	padding:10%;
+	padding: 5% 10% 5% 10%;
+	display:flex;
+	flex-direction:row;
+	background-color: #42D185;
+}
+
+h2 {
+	font-size: 2.5vw;
+}
+
+.sobreaquestfestival {
+	width: 	50%;
+	padding-right:2%;
+}
+
+.benvingutsalfestival {
+	width: 	50%;
+	padding-left:2%;
+}
+
+/*3. FOOTER*/
+footer {
+  background-color: purple;
+  color: #fff;
+  padding: 5% 10% 5% 10%
+}
+
+.footer-caixa {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  width: 25%;
+  padding:2%;
+}
+
+.footer-section h2 {
+  color: #fff;
+  margin-top:10%;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/*4. GRUPS.HTML*/
+
+#grups {
+	width: 100%;
+	height: auto;
+	background-color: #42D185;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	flex-direction: row;
+	padding:5% 10% 5% 10%;
+}
+
+.grup {
+	width: 40%;
+	height: auto;
+	padding-bottom:10%;
+}
+
+.grup img {
+	width: 100%;
+}
+
+/*5. CONTACT.HTML*/
+
+.contacte {
+	width: 100%;
+	height: auto;
+	background-color: #42D185;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	flex-direction: row;
+	padding:5% 10% 5% 10%;
+}
+
+.formulari {
+	width: 50%;
+	padding: 2%;
+	background-color: white;
+}
+
+.mapa {
+	width: 50%;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+	font-size:1rem;
+	padding-bottom:2%;
+}
+
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/*X. MEDIAQUERIES*/
+@media screen and (max-width: 768px) {
+
+	/*	MEDIAQUERIES MBL INDEX.HTML*/
+
+	header {
+		flex-direction:column;
+		padding-top:10%;
+	}
+
+	nav {
+		.linksmenu a {
+			font-size: 2rem;
+			line-height:4rem;
+		}
+	}
+
+	#logotip img{
+		height: auto;
+		width: 50%;
+	}
+
+	#menu {
+		display:flex;
+		flex-direction:column;
+	}
+
+	#about {
+		flex-direction:column;
+		padding-top:20%;
+		padding-bottom:20%;
+	}
+
+  .sobreaquestfestival {
+    width: 	100%;
+    } 
+
+  .benvingutsalfestival {
+    width: 	100%;
+    padding-top:2%;
+    }
+
+  .footer-caixa {
+    flex-direction:column;
+    }
+
+  .footer-section {
+    width: 100%;
+    }
+
+  p {
+    font-size: 2rem;
+    }
+
+  a {
+    font-size: 2rem;
+	}
+
+	a:hover {
+    font-size: 2rem;
+    text-decoration-line: underline;
+	}
+
+
+/*	MEDIAQUERIES MBL GRUPS.HTML*/
+	#grups {
+	flex-direction: column;
+	}
+
+	.grup {
+	width: 100%;
+	}
+
+}
+
+
+/*	MEDIAQUERIES MBL CONTACT.HTML*/
